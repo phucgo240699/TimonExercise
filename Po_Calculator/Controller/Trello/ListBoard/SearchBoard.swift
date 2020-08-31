@@ -26,7 +26,7 @@ extension ListBoardViewController: UISearchBarDelegate {
             }
             else {
                 searchBar.text = nil
-                FethAndReload()
+//                FethAndReload()
             }
         }
     }
