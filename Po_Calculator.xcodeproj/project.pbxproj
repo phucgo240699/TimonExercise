@@ -20,11 +20,11 @@
 		3E3520C324E2714100AF5FFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E3520C124E2714100AF5FFD /* LaunchScreen.storyboard */; };
 		3E36C52224EC33D10009C771 /* ListBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36C52124EC33D10009C771 /* ListBoardViewController.swift */; };
 		3E36C52424EC35FF0009C771 /* DetailBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36C52324EC35FF0009C771 /* DetailBoardViewController.swift */; };
-		3E36C52824EC382E0009C771 /* SettingBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E36C52724EC382E0009C771 /* SettingBoardViewController.swift */; };
 		3E3AEAD224FA455700221C42 /* LineProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEAD024FA455700221C42 /* LineProgressViewController.swift */; };
 		3E3AEAD324FA455700221C42 /* CircleProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEAD124FA455700221C42 /* CircleProgressViewController.swift */; };
 		3E3AEAD524FA9B8400221C42 /* ImageNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3AEAD424FA9B8400221C42 /* ImageNames.swift */; };
 		3E48634924EC3BE000B7A5C4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E48634824EC3BE000B7A5C4 /* Default-568h@2x.png */; };
+		3E4E9F9B24FD1C7000A45016 /* SearchBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4E9F9A24FD1C7000A45016 /* SearchBoard.swift */; };
 		3E58B50324F0E799005524EA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E58B50224F0E799005524EA /* Color.swift */; };
 		3E5BECE824E4E5ED008287B7 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BECE724E4E5ED008287B7 /* Example.swift */; };
 		3E5F5B4A24F5E1AC00FC2DD6 /* SetupDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F5B4924F5E1AC00FC2DD6 /* SetupDetailCard.swift */; };
@@ -72,11 +72,11 @@
 		3E3520C424E2714100AF5FFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E36C52124EC33D10009C771 /* ListBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBoardViewController.swift; sourceTree = "<group>"; };
 		3E36C52324EC35FF0009C771 /* DetailBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBoardViewController.swift; sourceTree = "<group>"; };
-		3E36C52724EC382E0009C771 /* SettingBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingBoardViewController.swift; sourceTree = "<group>"; };
 		3E3AEAD024FA455700221C42 /* LineProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineProgressViewController.swift; sourceTree = "<group>"; };
 		3E3AEAD124FA455700221C42 /* CircleProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressViewController.swift; sourceTree = "<group>"; };
 		3E3AEAD424FA9B8400221C42 /* ImageNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNames.swift; sourceTree = "<group>"; };
 		3E48634824EC3BE000B7A5C4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3E4E9F9A24FD1C7000A45016 /* SearchBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBoard.swift; sourceTree = "<group>"; };
 		3E58B50224F0E799005524EA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		3E5BECE724E4E5ED008287B7 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		3E5F5B4924F5E1AC00FC2DD6 /* SetupDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupDetailCard.swift; sourceTree = "<group>"; };
@@ -184,12 +184,10 @@
 		3E36C52024EC33B80009C771 /* Trello */ = {
 			isa = PBXGroup;
 			children = (
+				3E4E9F9924FD1BEE00A45016 /* ListBoard */,
 				3E821B0D24F4D772000243F3 /* DetailCard */,
 				3E88DBD924EF9EB300278A89 /* CreationBoard */,
 				3ED4E59424ECDCE30052CB5E /* DetailBoard */,
-				3EED45AF24ECCA87009B305D /* BoardTableViewCell.swift */,
-				3E36C52124EC33D10009C771 /* ListBoardViewController.swift */,
-				3E36C52724EC382E0009C771 /* SettingBoardViewController.swift */,
 			);
 			path = Trello;
 			sourceTree = "<group>";
@@ -214,6 +212,16 @@
 				3E7E4FBD24FA275A0031A0DE /* UIScrollView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3E4E9F9924FD1BEE00A45016 /* ListBoard */ = {
+			isa = PBXGroup;
+			children = (
+				3E36C52124EC33D10009C771 /* ListBoardViewController.swift */,
+				3EED45AF24ECCA87009B305D /* BoardTableViewCell.swift */,
+				3E4E9F9A24FD1C7000A45016 /* SearchBoard.swift */,
+			);
+			path = ListBoard;
 			sourceTree = "<group>";
 		};
 		3E5BECE624E4E5DC008287B7 /* Model */ = {
@@ -540,8 +548,8 @@
 				3EDAAC9624F2057100459F17 /* BackgroundColoBoardCLVCell.swift in Sources */,
 				3E3AEAD324FA455700221C42 /* CircleProgressViewController.swift in Sources */,
 				3E21D48424F3A584005EFE2C /* CustomBoard.swift in Sources */,
-				3E36C52824EC382E0009C771 /* SettingBoardViewController.swift in Sources */,
 				3E3520B924E2713F00AF5FFD /* SceneDelegate.swift in Sources */,
+				3E4E9F9B24FD1C7000A45016 /* SearchBoard.swift in Sources */,
 				3E9609B524F8F9F100175AAE /* CollectionView.swift in Sources */,
 				3E794CE024F660A1003B616A /* ListCollectionViewCell.swift in Sources */,
 				3EF5FC7024E3C1E9008D56A0 /* String+Extensions.swift in Sources */,

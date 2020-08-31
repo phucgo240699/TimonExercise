@@ -62,6 +62,21 @@ class CustomBoard {
         return board
     }
     
+    func getBoardsByTitle(by title: String) -> [Board] {
+        do {
+            let request: NSFetchRequest = Board.fetchRequest()
+            let predicate: NSPredicate = NSPredicate(format: "title CONTAINS %@", title)
+            let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)
+            request.predicate = predicate
+            request.sortDescriptors = [sortDescriptor]
+            
+            return try context.fetch(request)
+        } catch {
+            print(error)
+        }
+        return []
+    }
+    
     func getBoardsSorting(by field: String, ascending: Bool) -> [Board] {
         do {
             let request: NSFetchRequest = Board.fetchRequest()

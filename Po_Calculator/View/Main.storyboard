@@ -81,16 +81,6 @@
             </objects>
             <point key="canvasLocation" x="-742" y="1162"/>
         </scene>
-        <!--Creation Card Board-->
-        <scene sceneID="Xr3-er-JcW">
-            <objects>
-                <viewController id="jQy-FK-cM0" customClass="CreationBoardViewController" customModule="Po_Calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Creation Card Board" id="d2u-tF-HHA"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gyR-UV-cm7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-742" y="1908"/>
-        </scene>
         <!--Detail Board-->
         <scene sceneID="7rc-nE-79H">
             <objects>
@@ -108,31 +98,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="0WN-mj-0ch" kind="presentation" identifier="gotoSetting" modalPresentationStyle="pageSheet" id="0we-Bk-fyo"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Smr-0H-UZb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="73.913043478260875" y="1161.8303571428571"/>
-        </scene>
-        <!--Setting-->
-        <scene sceneID="GnD-tu-5or">
-            <objects>
-                <viewController id="0WN-mj-0ch" customClass="SettingBoardViewController" customModule="Po_Calculator" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="82n-gK-Sd8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="cwh-rZ-5DF"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Setting" id="6Ha-GO-7zK">
-                        <barButtonItem key="rightBarButtonItem" title="Edit" id="4IE-4t-DBQ"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yTN-Q4-WN4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="74" y="1908"/>
         </scene>
         <!--Item-->
         <scene sceneID="Q7G-KH-IIo">

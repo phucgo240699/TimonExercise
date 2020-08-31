@@ -142,13 +142,6 @@ extension ListBoardViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-// Search Bar
-extension ListBoardViewController : UISearchBarDelegate {
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.endEditing(true)
-    }
-}
-
 // Functions support
 extension ListBoardViewController {
     func setUpFontSize() {
@@ -164,7 +157,9 @@ extension ListBoardViewController {
     func FethAndReload() {
         boards = CustomBoard.shared.getBoardsSorting(by: "id", ascending: true)
         
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
 
