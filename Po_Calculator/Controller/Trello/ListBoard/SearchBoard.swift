@@ -26,13 +26,8 @@ extension ListBoardViewController: UISearchBarDelegate {
             }
             else {
                 searchBar.text = nil
-//                FethAndReload()
+                FethAndReload()
             }
         }
-    }
-    
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        searchBar.text = nil
-        FethAndReload()
     }
 }
