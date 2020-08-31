@@ -10,9 +10,6 @@ import Foundation
 import UIKit
 
 extension DetailBoardViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-    
-    
     //
     // Size Item
     //

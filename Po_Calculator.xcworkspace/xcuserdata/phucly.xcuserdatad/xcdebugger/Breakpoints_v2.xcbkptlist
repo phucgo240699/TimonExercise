@@ -567,22 +567,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E8FAF201-52B0-4AE0-98E6-CBC523119410"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Po_Calculator/Controller/Trello/DetailBoard/Delegates/CollectionView/CollectionView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "collectionView(_:numberOfItemsInSection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F691E76B-A7A2-4A9C-80E5-F3E4EE21A462"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -590,40 +574,40 @@
             filePath = "Po_Calculator/Controller/Trello/DetailBoard/DetailBoardViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "F691E76B-A7A2-4A9C-80E5-F3E4EE21A462 - ad8580ae3d84602"
+                  uuid = "F691E76B-A7A2-4A9C-80E5-F3E4EE21A462 - 4c6abcd2a4e7c413"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Po_Calculator.DetailBoardViewController.viewDidAppear(Swift.Bool) -&gt; ()"
                   moduleName = "Po_Calculator"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/phucly/Documents/Study/IOS/Po_Calculator/Po_Calculator/Controller/Trello/DetailBoard/DetailBoardViewController.swift"
+                  urlString = "file:///Users/phucly/Desktop/Po_Calculator/Po_Calculator/Controller/Trello/DetailBoard/DetailBoardViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "135"
-                  endingLineNumber = "135"
-                  offsetFromSymbolStart = "5932">
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "5936">
                </Location>
                <Location
-                  uuid = "F691E76B-A7A2-4A9C-80E5-F3E4EE21A462 - ad8580ae3d84602"
+                  uuid = "F691E76B-A7A2-4A9C-80E5-F3E4EE21A462 - 4c6abcd2a4e7c413"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "Po_Calculator.DetailBoardViewController.viewDidAppear(Swift.Bool) -&gt; ()"
                   moduleName = "Po_Calculator"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/phucly/Documents/Study/IOS/Po_Calculator/Po_Calculator/Controller/Trello/DetailBoard/DetailBoardViewController.swift"
+                  urlString = "file:///Users/phucly/Desktop/Po_Calculator/Po_Calculator/Controller/Trello/DetailBoard/DetailBoardViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "135"
-                  endingLineNumber = "135"
-                  offsetFromSymbolStart = "7324">
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "7328">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -695,22 +679,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2A498600-85EF-471E-BDEC-9609A8AB7777"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Po_Calculator/Controller/Trello/DetailBoard/Delegates/CollectionView/CollectionView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "collectionView(_:cellForItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "3DE0072A-945D-4D28-8885-86D801BD18DB"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -753,6 +721,38 @@
             startingLineNumber = "181"
             endingLineNumber = "181"
             landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A33AE5F-710D-4FA4-9253-981F42DFD5EC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Po_Calculator/Controller/Trello/DetailBoard/DetailBoardViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "updateTableView(tableView:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "626F8FDC-7A00-4647-97F8-1A65D2C58F68"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Po_Calculator/Controller/Trello/DetailBoard/Delegates/CollectionView/CollectionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

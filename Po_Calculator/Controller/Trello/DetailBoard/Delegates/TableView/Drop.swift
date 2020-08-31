@@ -55,10 +55,12 @@ extension DetailBoardViewController: UITableViewDropDelegate {
                 let cell2 = self.collectionView?.cellForItem(at: IndexPath(row: Int(tableView.tag), section: 0))
                 
                 if cell1 != nil {
-                    (cell1 as! ListCollectionViewCell).tableView.reloadData() //updateTableView(tableView: &(cell1 as! ListCollectionViewCell).tableView)
+                    (cell1 as! ListCollectionViewCell).tableView.isEditing = false
+                    self.updateTableView(tableView: &(cell1 as! ListCollectionViewCell).tableView)
                 }
                 if cell2 != nil {
-                    (cell2 as! ListCollectionViewCell).tableView.reloadData() //self.updateTableView(tableView: &(cell2 as! ListCollectionViewCell).tableView)
+                    (cell2 as! ListCollectionViewCell).tableView.isEditing = false
+                    self.updateTableView(tableView: &(cell2 as! ListCollectionViewCell).tableView)
                 }
                 if cell1 == nil {
                     self.startDragTable?.reloadData()

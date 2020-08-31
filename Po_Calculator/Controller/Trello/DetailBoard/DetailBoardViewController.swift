@@ -60,9 +60,6 @@ class DetailBoardViewController: UIViewController, UIGestureRecognizerDelegate {
         present(alertConstant, animated: true, completion: nil)
     }
     
-    
-    
-    
     // Core Data
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var board: Board? {
