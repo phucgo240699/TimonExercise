@@ -10,13 +10,29 @@ import Foundation
 import UIKit
 
 extension ListBoardViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = nil
+        FethAndReload()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if let text = searchBar.text {
-            self.boards = CustomBoard.shared.getBoardsByTitle(by: text)
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+            if text.isEmptyOrSpaceing() == false {
+                self.boards = CustomBoard.shared.getBoardsByTitle(by: text)
+
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+            else {
+                searchBar.text = nil
+                FethAndReload()
             }
         }
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchBar.text = nil
+        FethAndReload()
     }
 }
