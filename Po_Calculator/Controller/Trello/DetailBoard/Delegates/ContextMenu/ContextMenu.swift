@@ -14,7 +14,7 @@ extension DetailBoardViewController {
     func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
         let configuration = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { _ -> UIMenu? in
             
-            let delete = UIAction(title: "Delete", image: UIImage(systemName: "trash"), attributes: .destructive) { _ in
+            let delete = UIAction(title: "Delete list", image: UIImage(systemName: "trash"), attributes: .destructive) { _ in
                 
                 guard let board = self.board else {
                     return
@@ -31,7 +31,36 @@ extension DetailBoardViewController {
                 }
             }
             
-            return UIMenu(title: "", image: nil, identifier: nil, options: [], children: [delete])
+            let edit = UIAction(title: "Edit list's name", image: UIImage(systemName: "slider.horizontal.3")) { _ in
+                
+                let alert = UIAlertController(title: "Edit name", message: nil, preferredStyle: .alert)
+                var textField : UITextField?
+                let saveAction = UIAlertAction(title: "Save", style: .default) { (action) in
+                    if let text = textField?.text, let board = self.board {
+                        if text.isEmptyOrSpaceing() == false {
+                            CustomList.shared.updateList(index: indexPath.row, board: board, name: text)
+                            
+                            DispatchQueue.main.async {
+                                collectionView.reloadItems(at: [indexPath])
+                            }
+                        }
+                    }
+                }
+                let cancelAction = UIAlertAction(title: "Cancel", style: .default) { (action) in
+                    
+                }
+
+                alert.addTextField { (alertTextField) in
+                    alertTextField.placeholder = "Typing name of new list"
+                    textField = alertTextField
+                }
+                alert.addAction(saveAction)
+                alert.addAction(cancelAction)
+                
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+            return UIMenu(title: "", image: nil, identifier: nil, options: [], children: [delete, edit])
         }
         
         return configuration

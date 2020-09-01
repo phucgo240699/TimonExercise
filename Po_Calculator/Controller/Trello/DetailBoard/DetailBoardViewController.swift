@@ -22,7 +22,7 @@ class DetailBoardViewController: UIViewController, UIGestureRecognizerDelegate {
     var selectedCard: Card?
     
     @IBAction func addBtnPressed(_ sender: UIBarButtonItem) {
-        var textField: UITextField? = UITextField()
+        var textField: UITextField?
         var alert: UIAlertController? = UIAlertController(title: "Create new List", message: "", preferredStyle: .alert)
         var okAction: UIAlertAction? = UIAlertAction(title: "Ok", style: .default) { (action) in
             if let text = textField!.text, let board = self.board {
