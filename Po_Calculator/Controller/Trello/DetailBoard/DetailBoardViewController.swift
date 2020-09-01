@@ -9,8 +9,13 @@
 import UIKit
 import CoreData
 
+protocol DetailBoardViewControllerDelegate {
+    func isSetNameAndThumbnail() -> Bool
+}
 
 class DetailBoardViewController: UIViewController, UIGestureRecognizerDelegate {
+    
+    var delegate: DetailBoardViewControllerDelegate?
     
     var collectionView: UICollectionView?
     var collectionViewCellSize: CGSize = CGSize(width: 200, height: 400)
@@ -77,7 +82,11 @@ class DetailBoardViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("did load")
+        // Check board
+        guard board != nil else {
+            return
+        }
         // Setup Navigation
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         let backBTN = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(DetailBoardViewController.backForWard))
@@ -85,19 +94,50 @@ class DetailBoardViewController: UIViewController, UIGestureRecognizerDelegate {
         
         initializeCollectionView()
         
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        // Check board
-        guard board != nil else {
-            return
-        }
-        
-        // Set background of view
         if let thumbnail = board?.thumbnail {
+            setBackgroundView(thumbnail: thumbnail)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("will appear")
+        if delegate?.isSetNameAndThumbnail() == true {
+            guard let board = board else {
+                return
+            }
+            
+            guard let thumbnail = board.thumbnail else {
+                return
+            }
+            
+            setBackgroundView(thumbnail: thumbnail)
+            setNameBoardListCard()
+        }
+    }
+    
+    @objc func backForWard() {
+        navigationController?.popViewController(animated: true)
+    }
+}
+
+// Function Support
+extension DetailBoardViewController {
+    
+    func setNameBoardListCard() {
+        if let selectedList = selectedList {
+            
+            (collectionView?.cellForItem(at: IndexPath(row: Int(selectedList.id), section: 0)) as! ListCollectionViewCell).tableView.reloadData()
+            
+            self.navigationItem.title = board?.title
+            
+            self.selectedList = nil
+        }
+    }
+    
+    func setBackgroundView(thumbnail: String) {
             if include(arr: Image.names, element: thumbnail) {
-                if let image = UIImage (named: thumbnail), let collectionView = collectionView {
+                if let image = UIImage (named: thumbnail) {
                     let imgView = UIImageView(image: image)
                     imgView.frame = view.bounds
                     imgView.layer.masksToBounds = true
@@ -110,7 +150,7 @@ class DetailBoardViewController: UIViewController, UIGestureRecognizerDelegate {
                         }
                     }
                     
-                    view.insertSubview(imgView, belowSubview: collectionView)
+                    view.insertSubview(imgView, at: 0)
                 }
             }
             else {
@@ -124,26 +164,10 @@ class DetailBoardViewController: UIViewController, UIGestureRecognizerDelegate {
                     }
                 }
             }
-        }
         
-        // Set name of (board, list, card), reload tableView
-        if let selectedList = selectedList {
-            
-            (collectionView?.cellForItem(at: IndexPath(row: Int(selectedList.id), section: 0)) as! ListCollectionViewCell).tableView.reloadData()
-            
-            self.navigationItem.title = board?.title
-            
-            self.selectedList = nil
-        }
+
     }
     
-    @objc func backForWard() {
-        navigationController?.popViewController(animated: true)
-    }
-}
-
-// Function Support
-extension DetailBoardViewController {
     func include(arr: [String], element: String) -> Bool {
         for e in arr {
             if element == e {

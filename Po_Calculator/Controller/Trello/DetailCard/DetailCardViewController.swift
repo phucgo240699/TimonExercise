@@ -33,7 +33,7 @@ class DetailCardViewController: UIViewController {
     var board: Board?
     var list: List?
     var card: Card?
-        
+    var isResetDataDetailBoard: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,6 +129,8 @@ class DetailCardViewController: UIViewController {
             
             try (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext.save()
             
+            isResetDataDetailBoard = true
+            
             DispatchQueue.main.async {
                 self.closeVC()
             }
@@ -208,4 +210,11 @@ extension DetailCardViewController: UICollectionViewDelegate, UICollectionViewDa
         }
     }
     
+}
+
+
+extension DetailCardViewController: DetailBoardViewControllerDelegate {
+    func isSetNameAndThumbnail() -> Bool {
+        return isResetDataDetailBoard ?? false
+    }
 }

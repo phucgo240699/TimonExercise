@@ -9,7 +9,13 @@
 import UIKit
 import CoreData
 
+protocol ListBoardViewControllerDelegate {
+    func isLoadListBoard() -> Bool
+}
+
 class ListBoardViewController: UIViewController {
+    
+    var delegate: ListBoardViewControllerDelegate?
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!
@@ -17,6 +23,7 @@ class ListBoardViewController: UIViewController {
     @IBAction func addBtnPressed(_ sender: UIBarButtonItem) {
         let creationBoardVC = CreationBoardViewControlelr()
         creationBoardVC.modalPresentationStyle = .fullScreen
+        delegate = creationBoardVC
         self.present(creationBoardVC, animated: true, completion: nil)
     }
     var refreshControl = UIRefreshControl()
@@ -30,6 +37,7 @@ class ListBoardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        boards = CustomBoard.shared.getBoardsSorting(by: "id", ascending: true)
         
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
@@ -47,7 +55,9 @@ class ListBoardViewController: UIViewController {
     
     override func viewWillAppear (_ animated: Bool) {
         super.viewWillAppear(animated)
-        FethAndReload()
+        if delegate?.isLoadListBoard() == true {
+            FethAndReload()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -94,7 +104,6 @@ extension ListBoardViewController: UITableViewDelegate, UITableViewDataSource {
         let destination = segue.destination
         
         if type(of: destination) == DetailBoardViewController.self {
-            
             if let indexPath = tableView.indexPathForSelectedRow {
                 (destination as! DetailBoardViewController).navigationItem.title = boards[indexPath.row].title
                 (destination as! DetailBoardViewController).board = boards[indexPath.row]

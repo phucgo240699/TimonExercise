@@ -17,7 +17,6 @@ extension DetailBoardViewController : UITableViewDelegate, UITableViewDataSource
     //
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: tableView.bounds.width * 0.2))
-//        footerView.backgroundColor = .green
         
         let addCardBtn = UIButton()
         footerView.addSubview(addCardBtn)
@@ -177,6 +176,7 @@ extension DetailBoardViewController : UITableViewDelegate, UITableViewDataSource
         detailCardVC.card = card
         
         selectedList = lists[tableView.tag]
+        delegate = detailCardVC
         
         self.present(detailCardVC, animated: true, completion: nil)
         

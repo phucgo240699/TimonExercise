@@ -25,9 +25,12 @@ class CreationBoardViewControlelr: UIViewController {
     
     var selectedCellIndex: Int = 0
     var selectedCollectionViewIndex: Int = 0
+    var isCreated: Bool?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        isCreated = nil
         view.backgroundColor = UIColor(named: "basicBackgroundColor")
         
         saveBtn = UIButton()
@@ -104,6 +107,7 @@ class CreationBoardViewControlelr: UIViewController {
         
         CustomBoard.shared.addBoard(thumbnail: thumbnail, title: (lblBoardValue?.text!)!)
         
+        isCreated = true
         self.closeVC()
     }
     
@@ -185,4 +189,14 @@ extension CreationBoardViewControlelr: UICollectionViewDelegate, UICollectionVie
         
     }
     
+}
+
+
+extension CreationBoardViewControlelr: ListBoardViewControllerDelegate {
+    func isLoadListBoard() -> Bool {
+        if isCreated == true {
+            return true
+        }
+        return false
+    }
 }
