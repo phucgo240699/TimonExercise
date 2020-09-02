@@ -22,7 +22,7 @@ extension DetailBoardViewController : UITableViewDelegate, UITableViewDataSource
         footerView.addSubview(addCardBtn)
         addCardBtn.frame = footerView.bounds
         addCardBtn.setTitle("+ Add Card", for: .normal)
-        addCardBtn.titleLabel?.font = UIFont(name:  "Helvetica Neue", size: addCardBtn.bounds.height * 0.5)
+        addCardBtn.titleLabel?.font = UIFont(name:  "Helvetica Neue", size: addCardBtn.bounds.height * 0.3)
         addCardBtn.setTitleColor(UIColor.lightGray, for: .normal)
         
         addCardBtn.addTarget(self, action: #selector(self.addCard(sender:)) , for: .touchUpInside)
@@ -201,9 +201,7 @@ extension DetailBoardViewController : UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         
-//        let cards = CustomCard.shared.getCardsSorting(list: lists[tableView.tag], by: "id", ascending: true)
-        
-        CustomCard.shared.swapCardID(fromIndex: sourceIndexPath.row, toIndex: destinationIndexPath.row)
+        CustomCard.shared.swapCardID(fromIndex: sourceIndexPath.row, toIndex: destinationIndexPath.row, list: lists[tableView.tag])
         
         DispatchQueue.main.async {
             (self.collectionView?.cellForItem(at: IndexPath(row: tableView.tag, section: 0)) as! ListCollectionViewCell).tableView.reloadData()

@@ -199,14 +199,19 @@ class CustomCard {
         }
     }
     
-    func swapCardID(fromIndex: Int, toIndex: Int) {
+    func swapCardID(fromIndex: Int, toIndex: Int, list: List) {
         do {
             let request1: NSFetchRequest = Card.fetchRequest()
+            let predicate1: NSPredicate = NSPredicate(format: "list == %@", list)
             let sortDescriptor1 = NSSortDescriptor(key: "id", ascending: true)
+            request1.predicate = predicate1
             request1.sortDescriptors = [sortDescriptor1]
             
+            
             let request2: NSFetchRequest = Card.fetchRequest()
+            let predicate2: NSPredicate = NSPredicate(format: "list == %@", list)
             let sortDescriptor2 = NSSortDescriptor(key: "id", ascending: true)
+            request2.predicate = predicate2
             request2.sortDescriptors = [sortDescriptor2]
             
             

@@ -51,7 +51,7 @@ extension DetailBoardViewController {
                 }
 
                 alert.addTextField { (alertTextField) in
-                    alertTextField.placeholder = "Typing name of new list"
+                    alertTextField.placeholder = "Typing new name of the list"
                     textField = alertTextField
                 }
                 alert.addAction(saveAction)
@@ -65,23 +65,4 @@ extension DetailBoardViewController {
         
         return configuration
     }
-//    
-//    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
-//        let configuration = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { _ -> UIMenu? in
-//            
-//            let delete = UIAction(title: "Deleting", image: UIImage(systemName: "trash"), attributes: .destructive) { _ in
-//                print("Deleting from tableView ...")
-//            }
-//            let edit = UIAction(title: "Editing", image: UIImage(systemName: "slider.horizontal.3")) { _ in
-//                
-//                tableView.isEditing = !tableView.isEditing
-//                
-//            }
-//            return UIMenu(title: "", image: nil, identifier: nil, options: [], children: [delete, edit])
-//        }
-//        
-//        return configuration
-//    }
-//    
-//    
 }
