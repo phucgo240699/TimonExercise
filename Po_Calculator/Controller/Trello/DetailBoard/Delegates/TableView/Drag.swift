@@ -12,8 +12,6 @@ import UIKit
 extension DetailBoardViewController: UITableViewDragDelegate {
     
     func dragItem(forPhotoAt indexPath: IndexPath, tableview: UITableView) -> UIDragItem {
-        print("drag for photo at")
-        
         let card = CustomCard.shared.getCardsSorting(list: lists[tableview.tag], by: "id", ascending: ascendingId)[indexPath.row]
         
         var string = String()
@@ -31,7 +29,6 @@ extension DetailBoardViewController: UITableViewDragDelegate {
     
     
     func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
-        print("items for beginning session")
         let dragItem = self.dragItem(forPhotoAt: indexPath, tableview: tableView)
         return [dragItem]
     }

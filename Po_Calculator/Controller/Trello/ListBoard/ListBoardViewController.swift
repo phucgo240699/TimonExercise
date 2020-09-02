@@ -33,7 +33,7 @@ class ListBoardViewController: UIViewController {
     var boards: [Board] = []
     
     // Properties
-    var currentSelectedIndex: IndexPath = IndexPath(row: 0, section: 0)
+    //var currentSelectedIndex: IndexPath = IndexPath(row: 0, section: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class ListBoardViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "BoardTableViewCell", bundle: nil), forCellReuseIdentifier: "BoardCell")
         tableView.rowHeight = self.view.frame.height * 0.07
-        tableView.cellForRow(at: currentSelectedIndex)?.selectionStyle = .none
+//        tableView.cellForRow(at: currentSelectedIndex)?.selectionStyle = .none
         
         searchBar.delegate = self
         hideKeyboardWhenTappedAround()
@@ -84,6 +84,7 @@ extension ListBoardViewController: UITableViewDelegate, UITableViewDataSource {
         guard let thumbnail = board.thumbnail else { return cell }
         
         cell.accessoryType = .disclosureIndicator
+        cell.selectionStyle = .none
         
         if thumbnail.toColor() == .black {
             cell.thumbnail.backgroundColor = UIColor.clear
@@ -115,7 +116,7 @@ extension ListBoardViewController: UITableViewDelegate, UITableViewDataSource {
     // Did Select
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.selectionStyle = .gray
-        currentSelectedIndex = indexPath
+//        currentSelectedIndex = indexPath
         performSegue(withIdentifier: "gotoDetailBoard", sender: self)
     }
     

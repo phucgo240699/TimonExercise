@@ -21,7 +21,6 @@ extension DetailBoardViewController : UITableViewDelegate, UITableViewDataSource
         let addCardBtn = UIButton()
         footerView.addSubview(addCardBtn)
         addCardBtn.frame = footerView.bounds
-        //addCardBtn.titleLabel?.font.fontName ??
         addCardBtn.setTitle("+ Add Card", for: .normal)
         addCardBtn.titleLabel?.font = UIFont(name:  "Helvetica Neue", size: addCardBtn.bounds.height * 0.5)
         addCardBtn.setTitleColor(UIColor.lightGray, for: .normal)
@@ -47,16 +46,11 @@ extension DetailBoardViewController : UITableViewDelegate, UITableViewDataSource
         
         var okAction: UIAlertAction? = UIAlertAction(title: "Ok", style: .default) { (action) in
             
-            if  let text = textField?.text, let description = descriptionTextField?.text, let _ = self.board {
+            if  let text = textField?.text, let _ = self.board {
                 if text.isEmptyOrSpaceing() == false {
-                    CustomCard.shared.addCard(title: text, description: description, list: self.lists[sender.tag])
+                    CustomCard.shared.addCard(title: text, description: descriptionTextField?.text ?? "", list: self.lists[sender.tag])
                     
-                    
-                    //DispatchQueue.main.async {
-//                        (self.collectionView?.cellForItem(at: IndexPath(row: sender.tag, section: 0)) as! ListCollectionViewCell).tableView.reloadData()
                         self.updateTableView(tableView: &(self.collectionView?.cellForItem(at: IndexPath(row: sender.tag, section: 0)) as! ListCollectionViewCell).tableView)
-                    //}
-                    //self.navigationController?.popViewController(animated: true)
                 }
             }
             
@@ -192,6 +186,8 @@ extension DetailBoardViewController : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             CustomCard.shared.deleteCard(index: indexPath.row, list: lists[tableView.tag])
+            
+            self.updateTableView(tableView: &(self.collectionView?.cellForItem(at: IndexPath(row: tableView.tag, section: 0)) as! ListCollectionViewCell).tableView)
         }
     }
     

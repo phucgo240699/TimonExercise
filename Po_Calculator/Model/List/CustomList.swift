@@ -120,25 +120,5 @@ class CustomList {
             print(error)
         }
     }
-    
-//    func swapListID(fromIndex: Int, toIndex: Int, board: Board) {
-//        do {
-//
-//            let request1: NSFetchRequest = List.fetchRequest()
-//            let pre1: NSPredicate = NSPredicate(format: "board == %@", board)
-//            let sortDescriptor1 = NSSortDescriptor(key: "id", ascending: true)
-//
-//            request1.sortDescriptors = [sortDescriptor1]
-//            request1.predicate = pre1
-//
-//
-//
-//
-//
-//            try context.save()
-//        } catch {
-//            print(error)
-//        }
-//    }
 }
 

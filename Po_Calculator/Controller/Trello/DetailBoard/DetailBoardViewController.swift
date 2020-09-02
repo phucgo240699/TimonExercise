@@ -82,7 +82,6 @@ class DetailBoardViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("did load")
         // Check board
         guard board != nil else {
             return
@@ -101,7 +100,6 @@ class DetailBoardViewController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("will appear")
         if delegate?.isSetNameAndThumbnail() == true {
             guard let board = board else {
                 return
