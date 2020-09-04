@@ -9,13 +9,13 @@
 import UIKit
 import CoreData
 
-protocol ListBoardViewControllerDelegate {
+protocol ListBoardViewControllerDelegate: class {
     func isLoadListBoard() -> Bool
 }
 
 class ListBoardViewController: UIViewController {
     
-    var delegate: ListBoardViewControllerDelegate?
+    weak var delegate: ListBoardViewControllerDelegate?
     
     @IBOutlet var tableView: UITableView!
     @IBOutlet var searchBar: UISearchBar!

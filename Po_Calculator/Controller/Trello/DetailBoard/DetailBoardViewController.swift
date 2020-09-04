@@ -9,13 +9,13 @@
 import UIKit
 import CoreData
 
-protocol DetailBoardViewControllerDelegate {
+protocol DetailBoardViewControllerDelegate: class {
     func isSetNameAndThumbnail() -> Bool
 }
 
 class DetailBoardViewController: UIViewController, UIGestureRecognizerDelegate {
     
-    var delegate: DetailBoardViewControllerDelegate?
+    weak var delegate: DetailBoardViewControllerDelegate?
     
     var collectionView: UICollectionView?
     var collectionViewCellSize: CGSize = CGSize(width: 200, height: 400)

@@ -34,9 +34,11 @@ extension DetailBoardViewController {
             let edit = UIAction(title: "Edit list's name", image: UIImage(systemName: "slider.horizontal.3")) { _ in
                 
                 let alert = UIAlertController(title: "Edit name", message: nil, preferredStyle: .alert)
-                var textField : UITextField?
+                var textField : UITextField = UITextField()
+                textField.text = self.lists[indexPath.row].name
+                
                 let saveAction = UIAlertAction(title: "Save", style: .default) { (action) in
-                    if let text = textField?.text, let board = self.board {
+                    if let text = textField.text, let board = self.board {
                         if text.isEmptyOrSpaceing() == false {
                             CustomList.shared.updateList(index: indexPath.row, board: board, name: text)
                             
@@ -51,7 +53,7 @@ extension DetailBoardViewController {
                 }
 
                 alert.addTextField { (alertTextField) in
-                    alertTextField.placeholder = "Typing new name of the list"
+                    alertTextField.text = textField.text
                     textField = alertTextField
                 }
                 alert.addAction(saveAction)

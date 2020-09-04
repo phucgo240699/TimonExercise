@@ -28,6 +28,7 @@
 		3E58B50324F0E799005524EA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E58B50224F0E799005524EA /* Color.swift */; };
 		3E5BECE824E4E5ED008287B7 /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5BECE724E4E5ED008287B7 /* Example.swift */; };
 		3E5F5B4A24F5E1AC00FC2DD6 /* SetupDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5F5B4924F5E1AC00FC2DD6 /* SetupDetailCard.swift */; };
+		3E60E2E824FFD3A600AB27A9 /* ContextMenuListBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E60E2E724FFD3A600AB27A9 /* ContextMenuListBoard.swift */; };
 		3E794CE024F660A1003B616A /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E794CDF24F660A1003B616A /* ListCollectionViewCell.swift */; };
 		3E794CE224F66456003B616A /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E794CE124F66456003B616A /* CardTableViewCell.swift */; };
 		3E7E4FBE24FA275A0031A0DE /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7E4FBD24FA275A0031A0DE /* UIScrollView+Extension.swift */; };
@@ -39,7 +40,7 @@
 		3E9609B524F8F9F100175AAE /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9609B424F8F9F100175AAE /* CollectionView.swift */; };
 		3E9609B824F8FA0500175AAE /* Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9609B724F8FA0500175AAE /* Drag.swift */; };
 		3E9609BA24F8FA0D00175AAE /* Drop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9609B924F8FA0D00175AAE /* Drop.swift */; };
-		3E9609BE24F8FB2100175AAE /* ContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9609BD24F8FB2100175AAE /* ContextMenu.swift */; };
+		3E9609BE24F8FB2100175AAE /* ContextMenuDetailBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9609BD24F8FB2100175AAE /* ContextMenuDetailBoard.swift */; };
 		3EA2297924F1FF6900574894 /* BackgroundImageBoardCLVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA2297724F1FF6900574894 /* BackgroundImageBoardCLVCell.swift */; };
 		3EA2297A24F1FF6900574894 /* BackgroundImageBoardCLVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EA2297824F1FF6900574894 /* BackgroundImageBoardCLVCell.xib */; };
 		3ECB12DF24FCF0F900A2BE0C /* SetupCreationBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB12DE24FCF0F900A2BE0C /* SetupCreationBoardViewController.swift */; };
@@ -80,6 +81,7 @@
 		3E58B50224F0E799005524EA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		3E5BECE724E4E5ED008287B7 /* Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example.swift; sourceTree = "<group>"; };
 		3E5F5B4924F5E1AC00FC2DD6 /* SetupDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupDetailCard.swift; sourceTree = "<group>"; };
+		3E60E2E724FFD3A600AB27A9 /* ContextMenuListBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenuListBoard.swift; sourceTree = "<group>"; };
 		3E794CDF24F660A1003B616A /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		3E794CE124F66456003B616A /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		3E7E4FBD24FA275A0031A0DE /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
@@ -91,7 +93,7 @@
 		3E9609B424F8F9F100175AAE /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		3E9609B724F8FA0500175AAE /* Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drag.swift; sourceTree = "<group>"; };
 		3E9609B924F8FA0D00175AAE /* Drop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drop.swift; sourceTree = "<group>"; };
-		3E9609BD24F8FB2100175AAE /* ContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenu.swift; sourceTree = "<group>"; };
+		3E9609BD24F8FB2100175AAE /* ContextMenuDetailBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextMenuDetailBoard.swift; sourceTree = "<group>"; };
 		3EA2297724F1FF6900574894 /* BackgroundImageBoardCLVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageBoardCLVCell.swift; sourceTree = "<group>"; };
 		3EA2297824F1FF6900574894 /* BackgroundImageBoardCLVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackgroundImageBoardCLVCell.xib; sourceTree = "<group>"; };
 		3ECB12DE24FCF0F900A2BE0C /* SetupCreationBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupCreationBoardViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				3E36C52124EC33D10009C771 /* ListBoardViewController.swift */,
 				3EED45AF24ECCA87009B305D /* BoardTableViewCell.swift */,
 				3E4E9F9A24FD1C7000A45016 /* SearchBoard.swift */,
+				3E60E2E724FFD3A600AB27A9 /* ContextMenuListBoard.swift */,
 			);
 			path = ListBoard;
 			sourceTree = "<group>";
@@ -344,7 +347,7 @@
 		3E9609BC24F8FB0D00175AAE /* ContextMenu */ = {
 			isa = PBXGroup;
 			children = (
-				3E9609BD24F8FB2100175AAE /* ContextMenu.swift */,
+				3E9609BD24F8FB2100175AAE /* ContextMenuDetailBoard.swift */,
 			);
 			path = ContextMenu;
 			sourceTree = "<group>";
@@ -537,7 +540,7 @@
 				3E9609BA24F8FA0D00175AAE /* Drop.swift in Sources */,
 				3E0CEA0724F0E6A40079EC8F /* UIViewController+Extension.swift in Sources */,
 				3E821B0F24F4D78C000243F3 /* DetailCardViewController.swift in Sources */,
-				3E9609BE24F8FB2100175AAE /* ContextMenu.swift in Sources */,
+				3E9609BE24F8FB2100175AAE /* ContextMenuDetailBoard.swift in Sources */,
 				3EED45B124ECCA87009B305D /* BoardTableViewCell.swift in Sources */,
 				3ECC8D2724EAD2A0002B6709 /* PageViewController.swift in Sources */,
 				3E0CEA0524F0E6850079EC8F /* UIColor+Extension.swift in Sources */,
@@ -556,6 +559,7 @@
 				3E0CEA0924F0E6B00079EC8F /* UIView+Extension.swift in Sources */,
 				3E58B50324F0E799005524EA /* Color.swift in Sources */,
 				3E821B0C24F3B03D000243F3 /* CustomCheckList.swift in Sources */,
+				3E60E2E824FFD3A600AB27A9 /* ContextMenuListBoard.swift in Sources */,
 				3E0CE9FF24F0DB6E0079EC8F /* Database.xcdatamodeld in Sources */,
 				3E36C52224EC33D10009C771 /* ListBoardViewController.swift in Sources */,
 				3EE0850124EA5F62007455E8 /* ProgressingViewController.swift in Sources */,
